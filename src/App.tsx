@@ -1,16 +1,22 @@
 // import ListGroup from './components/ListGroup';
 
+import { useState } from 'react';
 import Alert from './components/Alert';
+import Button from './components/Button';
 
 function App() {
   // const cities = ['Cotonou', 'Parakou', 'Djougou', 'Bohicon', 'Nikki'];
   // const handleSelectItem = (item: string) => {
   //   console.log(item);
   // };
+  const [show, setShow] = useState(false);
   return (
     <div>
       {/* <ListGroup items={cities} heading='List of certain Benin Republic Cities' onSelectItem={handleSelectItem} /> */}
-      <Alert>Hello Children</Alert>
+      {show && <Alert onClose={() => setShow(false)}>My Alert</Alert>}
+      <Button color='primary' onClick={() => setShow(true)}>
+        Show Alert
+      </Button>
     </div>
   );
 }
