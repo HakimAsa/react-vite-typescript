@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Alert from './components/Alert';
 import Button from './components/Button';
+import Like from './components/Like';
 
 function App() {
   // const cities = ['Cotonou', 'Parakou', 'Djougou', 'Bohicon', 'Nikki'];
@@ -17,6 +18,8 @@ function App() {
       <Button color='primary' onClick={() => setShow(true)}>
         Show Alert
       </Button>
+      {/* like button example */}
+      <Like onClick={() => console.log('clicked')} />
     </div>
   );
 }
